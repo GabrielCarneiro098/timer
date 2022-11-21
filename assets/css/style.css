@@ -6,11 +6,12 @@
 
 body {
     height: 100vh;
-    background: rgb(2,0,36);
-    background: linear-gradient(242deg, rgba(2,0,36,1) 0%, rgba(121,9,114,1) 0%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(45deg, #000000, #282A3A, #735F32, #C69749);
+    background-size: 200% 200%;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: colors 10s ease infinite;
 }
 
 .relogio {
@@ -46,4 +47,18 @@ body {
 
 .relogio span.tempo {
     font-size: 20px;
+}
+
+@keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
